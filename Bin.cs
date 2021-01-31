@@ -59,8 +59,6 @@ namespace BinManagement
         // Add Medication units to the bin 
         public bool AddMedication(int medicationCount)
         {
-            // TODO: Use Observer Patterns to notify Observer with current count
-
             bool canAccomidate = Count + medicationCount <= MaxUnitCount;
             if (HasMedication() && canAccomidate)
             {
@@ -74,10 +72,6 @@ namespace BinManagement
         // Removes Medication units form the bin
         public bool RemoveMedication(int medicationCount)
         {
-
-            // TODO: Use Observer Patterns to notify Observer with current units
-            // Subscriber should check if it is < 20% for notification
-
             bool inStock = MaxUnitCount - Count - medicationCount >= 0;
             if (HasMedication() && !inStock)
             {
@@ -108,7 +102,6 @@ namespace BinManagement
             string medicationOutput = HasMedication() ? this.Medication.ToString() : "--None--";
             return $"Bin:{ this.Id}, Medication:{medicationOutput}, Units:{this.Count}/{ this.MaxUnitCount}";
         }
-
     }
 
     //Small Bin with Max 3 units
@@ -157,7 +150,6 @@ namespace BinManagement
             this.Medication = meditation;
             this.Count = count;
         }
-
     }
 
     // Large Bin with max 5 units
