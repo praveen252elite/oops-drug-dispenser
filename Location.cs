@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace BinManagement
 {
+    // Physical Loaction in a cabinet which holds mutiple bins
     public interface ILocation
     {
         // Unique Indentifier of the Bin
@@ -27,7 +28,7 @@ namespace BinManagement
                 {
                     { BinSize.Small, 3 },
                     { BinSize.Medium, 5 },
-                    {BinSize.Large , 2 }
+                    { BinSize.Large , 2 }
                 };
 
         // Manages Bins
