@@ -18,12 +18,13 @@ namespace BinManagement
 
             // Create new Cabinet, Inject Event publisher
             ICabinet cabinet = new MedicalCabinet(cabinetEventsPublisher);
-            
 
             cabinet.AssignMedication("praveen", "00", "Tylenol", "tynl");
             cabinet.AddMedicationUnit("praveen", "00", 5);
             cabinet.RemoveMedicationUnit("praveen", "00", 1);
+            
             cabinet.RemoveMedicationUnit("praveen", "00", 3);
+            
             cabinet.Report();
             Console.ReadLine();
         }
